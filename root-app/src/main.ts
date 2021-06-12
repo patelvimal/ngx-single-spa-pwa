@@ -8,7 +8,8 @@ import { environment } from './environments/environment';
 
 const SystemJS = (window as any).System;
 const appsConfig:any = {
-  app1: 'https://cdn.jsdelivr.net/gh/patelvimal/ngx-single-spa-pwa/micro-app-1/dist/micro-app1/main.js'
+  app1: 'https://cdn.jsdelivr.net/gh/patelvimal/ngx-single-spa-pwa/micro-app-1/dist/micro-app1/main.js',
+  app2: 'https://cdn.jsdelivr.net/gh/patelvimal/ngx-single-spa-pwa/micro-app-2/dist/micro-app1/main.js'
 };
 
 Object.keys(appsConfig).forEach((app) => {
@@ -16,7 +17,7 @@ Object.keys(appsConfig).forEach((app) => {
     name: app,
     app: () => SystemJS.import(appsConfig[app]),
 
-    activeWhen: [`/app1`],
+    activeWhen: [`/${app}`],
   });
 });
 
