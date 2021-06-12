@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "ngx-single-spa-pwa": {
+      "hosting": {
+        "root-app": [
+          "ngx-single-spa-pwa"
+        ]
+      }
+    }
+  }
+}
