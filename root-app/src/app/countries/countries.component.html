@@ -1,0 +1,15 @@
+<ng-container *ngFor="let item of countryList">
+    <mat-card class="example-card">
+        <mat-card-header>
+            <mat-card-title>{{item.name}}</mat-card-title>
+            <mat-card-subtitle>{{item.capital}}</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image [src]="item.flag" class="flag">
+        <mat-card-content>
+            <span *ngFor="let lang of item.languages">
+                {{lang}}
+            </span>
+        </mat-card-content>
+       
+    </mat-card>
+</ng-container>
