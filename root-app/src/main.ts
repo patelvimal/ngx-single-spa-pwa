@@ -8,7 +8,7 @@ import { environment } from './environments/environment';
 
 const SystemJS = (window as any).System;
 const appsConfig:any = {
-  app1: 'https://ngx-app-1.web.app/main.js'
+  app1: 'https://cdn.jsdelivr.net/gh/patelvimal/ngx-single-spa-pwa/micro-app-1/dist/micro-app1/main.js'
 };
 
 Object.keys(appsConfig).forEach((app) => {
