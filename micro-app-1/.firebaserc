@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "ngx-app-1": {
+      "hosting": {
+        "micro-app1": [
+          "ngx-app-1"
+        ]
+      }
+    }
+  }
+}

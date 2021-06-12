@@ -8,7 +8,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { Componenet1Component } from './componenet1/componenet1.component';
 import { Componenet2Component } from './componenet2/componenet2.component';
 import { Componenet3Component } from './componenet3/componenet3.component';
-import { CommonModule } from '@angular/common';
+import { APP_BASE_HREF, CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -24,7 +24,7 @@ import { CommonModule } from '@angular/common';
     BrowserAnimationsModule,
     MaterialModule
   ],
-  providers: [],
+  providers: [{provide: APP_BASE_HREF, useValue: '/app1'}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
