@@ -39,8 +39,7 @@
               "path": "extra-webpack.config.js",
               "libraryName": "micro-app2",
               "libraryTarget": "umd"
-            },
-            "deployUrl": "http://localhost:4400/"
+            }
           },
           "configurations": {
             "production": {
