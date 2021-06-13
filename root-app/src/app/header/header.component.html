@@ -1,27 +1,25 @@
-<mat-toolbar color="primary">
-    <button mat-icon-button class="example-icon" (click)="drawer.toggle()">
-        <mat-icon>menu</mat-icon>
-    </button>
-    <a routerLink="home" class="header-link"><span>Angular Single Spa PWA </span></a>
-    <span class="spacer"></span>
-    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-        <mat-icon>favorite</mat-icon>
-    </button>
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-        <mat-icon>share</mat-icon>
-    </button>
+<!-- Toolbar -->
+<mat-toolbar color="primary"  class="header"> 
+  <button mat-icon-button class="example-icon" (click)="sidenav.toggle()">
+      <mat-icon>menu</mat-icon>
+  </button>
+  <a routerLink="home" class="header-link"><span>Angular Single Spa PWA </span></a>
+  <span class="spacer"></span>
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+      <mat-icon>share</mat-icon>
+  </button>
 </mat-toolbar>
-<mat-drawer-container class="drawer-container" autosize>
-    <mat-drawer #drawer class="sidenav" mode="side" [opened]="false">
-      <mat-nav-list>
-        <a mat-list-item routerLink="app1">App 1</a>
-        <a mat-list-item routerLink="app2">App 2</a>
-      </mat-nav-list>
-    </mat-drawer>
-  
-    <div class="sidenav-content">
-      <div class="container">
-        <router-outlet></router-outlet>
-      </div>
-    </div>
-  </mat-drawer-container>
+<mat-sidenav-container>
+  <!-- Sidenav -->
+  <mat-sidenav #sidenav [mode]="'side'" [fixedInViewport]="true"
+    [fixedTopGap]=64>
+    <mat-nav-list>
+      <a mat-list-item routerLink="app1" (click)="sidenav.toggle()">App 1</a>
+      <a mat-list-item routerLink="app2" (click)="sidenav.toggle()">App 2</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <!-- Main content -->
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
