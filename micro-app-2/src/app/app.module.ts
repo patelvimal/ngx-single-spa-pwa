@@ -7,7 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ProductComponent } from './product/product.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { MaterialModule } from './material.module';
-import { APP_BASE_HREF } from '@angular/common';
+import { APP_BASE_HREF, CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -16,8 +16,9 @@ import { APP_BASE_HREF } from '@angular/common';
     ProductDetailComponent
   ],
   imports: [
-    BrowserModule,
+    CommonModule,
     AppRoutingModule,
+    BrowserModule,
     BrowserAnimationsModule,
     MaterialModule
   ],
