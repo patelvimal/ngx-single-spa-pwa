@@ -38,6 +38,9 @@ npm-debug.log
 yarn-error.log
 testem.log
 /typings
+/dist/index.html
+/dist/favicon.ico
+/dist/*.txt
 
 # System Files
 .DS_Store
