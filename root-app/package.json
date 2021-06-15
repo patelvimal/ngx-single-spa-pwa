@@ -7,8 +7,10 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
+    "pretty-quick": "pretty-quick",
     "build:single-spa:root-app": "ng build root-app --prod",
-    "serve:single-spa:root-app": "ng s --project root-app --disable-host-check --port 4200 --live-reload false"
+    "serve:single-spa:root-app": "ng s --project root-app --disable-host-check --port 4200 --live-reload false",
+    "postinstall": "husky install"
   },
   "private": true,
   "dependencies": {
@@ -38,11 +40,14 @@
     "@angular-devkit/build-angular": "~12.0.0",
     "@angular/cli": "~12.0.0",
     "@angular/compiler-cli": "~12.0.0",
+    "@commitlint/cli": "^12.1.4",
+    "@commitlint/config-conventional": "^12.1.4",
     "@types/jasmine": "~3.6.0",
     "@types/node": "^12.11.1",
     "@types/systemjs": "^6.1.0",
     "firebase-tools": "^8.0.0 || ^9.0.0",
     "fuzzy": "^0.1.3",
+    "husky": "^6.0.0",
     "inquirer": "^6.2.2",
     "inquirer-autocomplete-prompt": "^1.0.1",
     "jasmine-core": "~3.7.0",
@@ -53,6 +58,8 @@
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "^1.5.0",
     "open": "^7.0.3",
+    "prettier": "^2.3.1",
+    "pretty-quick": "^3.1.0",
     "typescript": "~4.2.3"
   }
 }
