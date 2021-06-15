@@ -2,7 +2,7 @@
   "hosting": [
     {
       "target": "root-app",
-      "public": "dist/root-app",
+      "public": "dist",
       "ignore": [
         "**/.*"
       ],
