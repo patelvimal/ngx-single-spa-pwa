@@ -8,7 +8,9 @@ export class SpinnerService {
 
   show:BehaviorSubject<boolean>;
 
-  constructor() { }
+  constructor() {
+    this.show = new BehaviorSubject(false);
+   }
 
   showSpinner() {
     this.show.next(true);
